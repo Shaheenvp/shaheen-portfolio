@@ -8,7 +8,7 @@
   const PHONE = '+919544453993'
   const PHONE_PRETTY = '+91 95444 53993'
   const WA = 'https://wa.me/919544453993?text=' + encodeURIComponent("Hi Shaheen, I found you through your website and I'd like to talk.")
-  const EMAIL = 'mail@adnora.in'
+  const EMAIL = 'shaheen@adnora.in'
   const LINKEDIN = 'https://in.linkedin.com/in/mohammed-shaheen-879188249'
   const INSTAGRAM = 'https://www.instagram.com/adnora.in/'
   const SITES = {

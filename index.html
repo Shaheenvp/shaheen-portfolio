@@ -69,19 +69,6 @@ body::after{content:"";position:fixed;inset:-50%;z-index:95;pointer-events:none;
 .rise{opacity:0;transform:translateY(var(--y,16px));transition:opacity var(--d,.56s) var(--expo),transform var(--d,.56s) var(--expo);transition-delay:var(--delay,0ms)}
 .rise.in{opacity:1;transform:none}
 
-/* 1 · preloader */
-.pre{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:.75rem;
-  padding:max(var(--gutter),env(safe-area-inset-top,0px)) max(var(--gutter),env(safe-area-inset-right,0px)) max(var(--gutter),env(safe-area-inset-bottom,0px)) max(var(--gutter),env(safe-area-inset-left,0px));
-  transition:transform .65s var(--wipe)}
-.pre::before{content:"";position:absolute;inset:0;z-index:-10;background:var(--background)}
-@media (min-width:640px){.pre{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:1rem}}
-.pre__brand{font-family:var(--font-display);font-size:var(--fs-h3);text-transform:uppercase;line-height:1;letter-spacing:-.01em}
-.pre__count{font-family:var(--font-display);font-size:var(--fs-display);line-height:1;font-variant-numeric:tabular-nums}
-.pre__count i{font-style:normal;color:var(--accent)}
-.pre__bar{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(var(--p,0))}
-.pre.fade .pre__brand,.pre.fade .pre__count,.pre.fade .pre__bar{opacity:0;transition:opacity .3s ease}
-.pre.wipe{transform:translateY(-100%)}
-.pre.done{pointer-events:none;visibility:hidden}
 
 /* 2 · nav */
 .site-nav{position:fixed;inset-inline:0;top:0;z-index:50;pointer-events:none}
@@ -309,7 +296,6 @@ body::after{content:"";position:fixed;inset:-50%;z-index:95;pointer-events:none;
   .fbar{padding-bottom:calc(6rem + env(safe-area-inset-bottom,0px))}
 }
 @media (prefers-reduced-motion:reduce){
-  .pre{display:none}
   .marquee__track{animation:none}
   .line>span,.ch,.wd,.rise,.mmenu ul a,.panel__glyph{opacity:1!important;transform:none!important;transition:none!important}
   .panel.reveal,.feat__img.reveal{clip-path:none!important;transition:none!important}
@@ -320,12 +306,6 @@ body::after{content:"";position:fixed;inset:-50%;z-index:95;pointer-events:none;
 </style>
 </head>
 <body>
-
-<div class="pre" id="pre" aria-hidden="true">
-  <div class="pre__brand">Shaheen VP</div>
-  <div class="pre__count"><span id="preNum">0</span><i>%</i></div>
-  <div class="pre__bar" id="preBar"></div>
-</div>
 
 <header class="site-nav" id="siteNav">
   <nav aria-label="Main">
@@ -670,26 +650,7 @@ function heroSequence (base) {
   setTimeout(() => $('#heroDesc').classList.add('in'), base + 400)
   setTimeout(() => $('#cue').classList.add('in'), base + 900)
 }
-const pre = $('#pre')
-if (reduce) { pre.classList.add('done'); heroSequence(0) }
-else {
-  lenis?.stop(); scrollTo(0, 0)
-  const num = $('#preNum'), bar = $('#preBar'), t0 = performance.now()
-  const tick = now => {
-    const p = Math.min(1, (now - t0) / 2000)
-    num.textContent = Math.round(p * 100); bar.style.setProperty('--p', p)
-    if (p < 1) return requestAnimationFrame(tick)
-    pre.classList.add('fade')
-    setTimeout(() => {
-      pre.classList.add('wipe')
-      const finish = () => { if (pre.classList.contains('done')) return; pre.classList.add('done'); lenis?.start() }
-      pre.addEventListener('transitionend', e => { if (e.target === pre) finish() })
-      setTimeout(finish, 900)
-    }, 500)
-  }
-  requestAnimationFrame(tick)
-  heroSequence(2500)
-}
+heroSequence(reduce ? 0 : 150)
 </script>
 <script src="assets/nora.js" defer></script>
 </body>
