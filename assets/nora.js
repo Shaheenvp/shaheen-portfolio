@@ -49,7 +49,7 @@
   ACT.maps = { k: 'web', icon: I.web, label: 'Open in Maps', href: GBP, ext: true }
 
   const COUNTRIES = ['India', 'Saudi Arabia', 'UAE', 'Qatar', 'Bahrain', 'Uzbekistan', 'Georgia']
-  const CLIENTS = ['Qasr Laban', 'Madreena Kitchen', 'Mellow Interiors', 'Hajimakan', 'Blueprint Media', 'Vaganza Vacations',
+  const CLIENTS = ['Qasr Laban', 'Madheena Kitchen', 'Mellow Interiors', 'Hajimakan', 'Blueprint Media', 'Vaganza Vacations',
     'Rosabella Makeover Studio', 'Roxx Broasted', 'Edufy Overseas', 'Beatbox', 'Chillunuoru Kulfi', 'Hot Deals Kochi',
     'Beezy Solutions', 'Hotel Explora (4-star luxury hotel)', 'Malger Entertainments', 'Rentzo', 'Medure Edu', 'Vista Learners',
     "Let's Eat Bakers", 'Aegon Longevity &amp; Recovery', 'Al Abdali', 'Asaas Accounting']
