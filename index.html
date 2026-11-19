@@ -259,15 +259,10 @@ body::after{content:"";position:fixed;inset:-50%;z-index:95;pointer-events:none;
 .social a:hover::before{width:1.5rem;margin-right:.75rem}
 .copy{font-size:var(--fs-eyebrow);text-transform:uppercase;letter-spacing:.18em;color:var(--muted);line-height:1.6}
 @media (min-width:1024px){.copy{text-align:right}}
-.fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,calc(env(safe-area-inset-bottom,0px) + 10px));z-index:40;
-  display:none;align-items:center;gap:.6rem;padding:.85rem 1.15rem;border-radius:999px;background:var(--accent);color:#060805;font-weight:600;font-size:.85rem;letter-spacing:.04em;
-  box-shadow:0 12px 26px -12px rgba(0,0,0,.7);transform:translateY(140%);transition:transform .5s var(--expo)}
-.fab.show{transform:none}
 
 /* phones */
 @media (max-width:639px){
   :root{--section:5.5rem}
-  .fab{display:inline-flex}
   .marquee{padding-block:1.4rem}
   .marquee__item{font-size:2.4rem}
   .marquee__item::after{margin-inline:1.25rem;width:.5rem;height:.5rem}
@@ -339,7 +334,6 @@ body::after{content:"";position:fixed;inset:-50%;z-index:95;pointer-events:none;
     <a href="https://www.instagram.com/adnora.in/" target="_blank" rel="noreferrer noopener">Instagram · @adnora.in ↗</a>
   </div>
 </div>
-<a class="fab" id="fab" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
 
 <main style="position:relative;width:100%;overflow-x:hidden">
 
@@ -643,10 +637,6 @@ fitName(); addEventListener('resize', fitName)
 $$('[data-lines]').forEach(el => { splitLines(el); io.observe(el) })
 $$('.rise').forEach(el => { if (!el.closest('.hero')) io.observe(el) })
 $$('.panel.reveal, .feat__img').forEach(el => io.observe(el))
-const fab = $('#fab'); let pastHero = false, atContact = false
-const fabSync = () => fab.classList.toggle('show', pastHero && !atContact)
-new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; fabSync() }).observe($('#top'))
-new IntersectionObserver(([e]) => { atContact = e.isIntersecting; fabSync() }).observe($('#contact'))
 
 function heroSequence (base) {
   setTimeout(() => nameEl.classList.add('go'), base)

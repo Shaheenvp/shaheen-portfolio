@@ -315,8 +315,6 @@
 .nora-send:disabled{opacity:.4;cursor:default}
 .nora-send svg{width:20px;height:20px;fill:currentColor}
 .nora-foot{padding:0 12px 8px;text-align:center;font-size:11px;color:var(--n-muted);background:var(--n-bg)}
-/* make room for the page's own "Let's talk" button */
-body.has-nora .fab{right:calc(max(16px,env(safe-area-inset-right,0px)) + 70px)}
 @media (max-width:639px){
   .nora-panel{right:0;left:0;bottom:0;width:100%;height:100dvh;border-radius:0;border:0;transform-origin:bottom center}
   .nora-panel.open ~ .nora-launch,.nora-launch[aria-expanded="true"]{opacity:0;pointer-events:none}
