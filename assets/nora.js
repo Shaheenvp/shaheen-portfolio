@@ -44,101 +44,157 @@
     productions: { k: 'web', icon: I.web, label: 'adnoraproductions.in', href: SITES.productions, ext: true }
   }
 
+  const GBP = 'https://share.google/PRcGO0kX7OZvNBLuE'
+  ACT.google = { k: 'web', icon: I.web, label: 'Google profile', href: GBP, ext: true }
+  ACT.maps = { k: 'web', icon: I.web, label: 'Open in Maps', href: GBP, ext: true }
+
+  const COUNTRIES = ['India', 'Saudi Arabia', 'UAE', 'Qatar', 'Bahrain', 'Uzbekistan', 'Georgia']
+  const CLIENTS = ['Qasr Laban', 'Madreena Kitchen', 'Mellow Interiors', 'Hajimakan', 'Blueprint Media', 'Vaganza Vacations',
+    'Rosabella Makeover Studio', 'Roxx Broasted', 'Edufy Overseas', 'Beatbox', 'Chillunuoru Kulfi', 'Hot Deals Kochi',
+    'Beezy Solutions', 'Hotel Explora (4-star luxury hotel)', 'Malger Entertainments', 'Rentzo', 'Medure Edu', 'Vista Learners',
+    "Let's Eat Bakers", 'Aegon Longevity &amp; Recovery', 'Al Abdali', 'Asaas Accounting']
+  const CLIENT_KEYS = ['qasr laban', 'qasr', 'laban', 'madreena', 'madheena', 'mellow', 'mellow interiors', 'hajimakan', 'blueprint', 'blueprint media',
+    'vaganza', 'rosabella', 'roxx', 'broasted', 'edufy', 'beatbox', 'kulfi', 'chillunuoru', 'hot deals', 'hotdeals', 'beezy', 'explora', 'hotel explora',
+    'malger', 'medure', 'vista', 'vista learners', 'lets eat', 'bakers', 'aegon', 'ageon', 'longevity', 'al abdali', 'abdali', 'asaas']
+
+  const SERVICES = [
+    { id: 'branding', t: 'Branding &amp; Design', items: ['Brand identity creation &amp; positioning', 'Logo creation &amp; design', 'Social media poster design', 'Trending-moment creatives and promotions', 'Packaging design &amp; ideas', 'Printing &amp; collateral design'],
+      keys: ['branding', 'brand', 'brand identity', 'identity', 'logo', 'design', 'designing', 'poster', 'posters', 'creative', 'creatives', 'packaging', 'printing', 'print', 'brochure', 'collateral', 'graphic', 'graphics', 'positioning'] },
+    { id: 'consult', t: 'Growth Consultation', items: ['Business consulting', 'Social media consulting', 'Website or product audit &amp; consultation', 'Google Business Profile (GMB) consultation'],
+      keys: ['consulting', 'consultation', 'consultant', 'consult', 'business consulting', 'audit', 'strategy', 'advice', 'growth'] },
+    { id: 'social', t: 'Social Media', items: ['Social media management', 'Social media marketing'],
+      keys: ['social media', 'social media management', 'social media marketing', 'smm', 'page management', 'handling', 'facebook', 'posting'] },
+    { id: 'video', t: 'Video Production', items: ['Social media videos', 'Brand advertisements', 'Creative video production', 'Product videos', 'Brand event or campaign videos', 'AI video production'],
+      keys: ['video', 'videos', 'video production', 'film', 'films', 'shoot', 'shooting', 'reel', 'reels', 'ad film', 'advertisement', 'product video', 'ai video', 'event video', 'editing', 'brand film'] },
+    { id: 'marketing', t: 'Marketing', items: ['Lead generation &amp; performance marketing', 'Offline creative marketing strategies', 'Brand promotion &amp; events', 'Product promotion &amp; events', 'Brand- or product-level launches &amp; events'],
+      keys: ['marketing', 'digital marketing', 'lead', 'leads', 'lead generation', 'performance marketing', 'meta ads', 'facebook ads', 'instagram ads', 'offline', 'promotion', 'promotions', 'event', 'events', 'launch', 'launches', 'campaign', 'campaigns'] },
+    { id: 'seo', t: 'SEO &amp; GEO', items: ['Google Business Profile (GMB) optimisation', 'Google Business Profile (GMB) management', 'Website SEO', 'Google Ads', 'Generative Engine Optimisation (GEO)', 'Local SEO'],
+      keys: ['seo', 'website seo', 'geo', 'gmb', 'google business', 'google my business', 'google profile', 'google ads', 'ppc', 'ranking', 'rank', 'local seo', 'search', 'ai search', 'chatgpt', 'generative engine'] },
+    { id: 'dev', t: 'Website &amp; Software Development', items: ['Static &amp; dynamic website creation', 'E-commerce website creation &amp; setup', 'Custom software &amp; application development', 'Mobile application development'],
+      keys: ['website', 'websites', 'web', 'web development', 'app', 'apps', 'mobile app', 'application', 'software', 'development', 'developer', 'ecommerce', 'e-commerce', 'online store', 'shopify', 'crm', 'erp'] },
+    { id: 'influencer', t: 'Influencer &amp; Celebrity Marketing', items: ['Influencer marketing (paid &amp; barter collaborations)', 'Celebrity management'],
+      keys: ['influencer', 'influencers', 'influencer marketing', 'celebrity', 'celebrities', 'barter', 'collab', 'collaboration', 'creator', 'creators', 'blogger', 'vlogger'] },
+    { id: 'tvradio', t: 'TV &amp; Radio Ads', items: ['TV commercial (TVC) ad production', 'Radio ad creation &amp; publishing'],
+      keys: ['tv', 'tvc', 'television', 'radio', 'tv ad', 'radio ad', 'commercial', 'fm'] }
+  ]
+
   /* ---------------- knowledge base ---------------- */
   // Each intent: keywords (weighted by match), answer html, optional actions + follow-up suggestions.
   const KB = [
     { id: 'greet', keys: ['hi', 'hello', 'hey', 'hai', 'hola', 'namaste', 'salam', 'assalamu', 'good morning', 'good evening', 'yo'],
-      a: () => `Hi! I'm <b>Nora</b>, Shaheen's assistant. Ask me about Shaheen, the Adnora Group and its companies, or how to get in touch.`,
-      next: ['Who is Shaheen?', 'Adnora companies', 'Contact Shaheen'] },
+      a: () => `Hi! I'm <b>Nora</b>, Shaheen's assistant. Ask me about Shaheen, the Adnora Group, our services, clients and countries we work in, or how to get in touch.`,
+      next: ['Who is Shaheen?', 'Services', 'Clients', 'Contact Shaheen'] },
 
     { id: 'nora', keys: ['who are you', 'what are you', 'nora', 'your name', 'are you ai', 'bot', 'robot'],
-      a: () => `I'm <b>Nora AI</b>, the assistant on Shaheen VP's website. I can tell you about Shaheen, the companies he runs, their services and clients, and connect you with him by call, WhatsApp or email.`,
+      a: () => `I'm <b>Nora AI</b>, the assistant on Shaheen VP's website. I can tell you about Shaheen, the Adnora companies, our services, clients, countries, reviews and office hours, and connect you with him by call, WhatsApp or email.`,
       next: ['Who is Shaheen?', 'Services', 'Contact Shaheen'] },
 
     { id: 'about', keys: ['who is shaheen', 'about shaheen', 'shaheen', 'shaheen vp', 'founder', 'md', 'managing director', 'ceo', 'profile', 'bio', 'background', 'owner', 'mohammed', 'who is he', 'his role', 'experience'],
-      a: () => `<b>Shaheen VP</b> (Mohammed Shaheen) is the <b>Founder &amp; Managing Director of the Adnora Group of Companies</b>, based in Kerala.` +
+      a: () => `<b>Shaheen VP</b> (Mohammed Shaheen) is the <b>Founder &amp; Managing Director of the Adnora Group of Companies</b>, based in Kochi, Kerala.` +
         list([
           '<b>Adnora Group</b>: Founder &amp; MD',
-          '<b>Adnora Productions</b>: Founder &amp; CEO (digital marketing and video production)',
-          '<b>Adnora Solutions</b>: web and app development, part of the group',
+          '<b>Adnora Productions</b>: Founder &amp; CEO (marketing, branding and video production)',
+          '<b>Adnora Solutions</b>: web, software and app development, part of the group',
           '<b>Rentzo</b>: Co-founder (real-estate platform for Kerala)'
         ]) +
-        `He builds companies where story meets software: films and campaigns that grab attention, and websites and apps that turn it into growth.`,
+        `Under his lead, Adnora has delivered marketing, video production and software projects for clients in <b>${COUNTRIES.length} countries</b>: ${COUNTRIES.join(', ')}.`,
       actions: ['linkedin', 'whatsapp'],
-      next: ['Adnora Group', 'Rentzo', 'Contact Shaheen'] },
+      next: ['Adnora Group', 'Countries', 'Contact Shaheen'] },
 
-    { id: 'group', keys: ['adnora group', 'group', 'companies', 'company', 'business', 'businesses', 'ventures', 'venture', 'adnora', 'firms', 'what does he do', 'work'],
+    { id: 'group', keys: ['adnora group', 'group', 'companies', 'company', 'business', 'businesses', 'ventures', 'venture', 'adnora', 'firms', 'what does he do'],
       a: () => `The <b>Adnora Group of Companies</b> brings marketing, film and software together under one roof, with one team and one plan for every client.` +
         list([
-          '<b>Adnora Productions</b>: digital marketing, social media and video production',
-          '<b>Adnora Solutions</b>: websites, web applications and mobile apps',
+          '<b>Adnora Productions</b>: marketing agency for branding, social media, video production, SEO, influencer and TV/radio ads',
+          '<b>Adnora Solutions</b>: websites, e-commerce, custom software and mobile apps',
           '<b>Adnora</b> (adnora.in): one studio for brand films, identity, campaigns, websites, software and online stores',
           '<b>Rentzo</b>: real-estate platform for Kerala (co-founded)'
         ]) + `Which one would you like to know more about?`,
       actions: ['adnora', 'productions', 'solutions'],
       next: ['Adnora Productions', 'Adnora Solutions', 'Rentzo'] },
 
-    { id: 'productions', keys: ['production', 'productions', 'marketing', 'digital marketing', 'agency', 'video', 'film', 'films', 'shoot', 'seo', 'social media', 'ads', 'meta ads', 'google ads', 'ppc', 'campaign', 'content', 'lead generation', 'leads', 'graphics', 'reel', 'reels', 'branding', 'brand film'],
-      a: () => `<b>Adnora Productions</b>: <i>"Crafting Digital Legacies, Not Just Campaigns."</i> A digital marketing agency and video production company led by Shaheen as Founder &amp; CEO.<br><br><b>Services</b>` +
-        list(['Content marketing', 'SEO &amp; website management', 'Social media strategy', 'Performance marketing (PPC, Meta Ads, Google Ads)', 'Video &amp; graphics production', 'Lead generation']) +
-        `<b>Selected work</b>` +
+    { id: 'productions', keys: ['production', 'productions', 'adnora productions', 'agency', 'marketing agency'],
+      a: () => `<b>Adnora Productions</b>: <i>"Crafting Digital Legacies, Not Just Campaigns."</i> A marketing agency in Kadavanthra, Kochi, led by Shaheen as Founder &amp; CEO. It's rated <b>5.0 ★ from 32 Google reviews</b>.<br><br>It covers branding &amp; design, growth consultation, social media, video production, marketing, SEO &amp; GEO, influencer &amp; celebrity marketing, and TV &amp; radio ads.<br><br><b>Selected work</b>` +
         list(['Qasr Laban: Google and AI search ranking (SEO)', 'Meta Ads campaign for a new fashion e-commerce brand: 5X ROAS', 'Viral blog content series: over 1 million readers', 'Award-winning brand documentary short for a cause']) +
         `Email: <a href="mailto:info@adnoraproductions.in">info@adnoraproductions.in</a>`,
-      actions: ['productions', 'whatsapp', 'instagram'],
-      next: ['Adnora Solutions', 'Clients', 'Contact Shaheen'] },
+      actions: ['productions', 'whatsapp', 'google'],
+      next: ['Services', 'Clients', 'Reviews'] },
 
-    { id: 'solutions', keys: ['solution', 'solutions', 'software', 'website', 'websites', 'web', 'app', 'apps', 'mobile app', 'application', 'development', 'developer', 'develop', 'build', 'tech', 'it company', 'ecommerce', 'e-commerce', 'online store'],
+    { id: 'solutions', keys: ['solution', 'solutions', 'adnora solutions', 'tech company', 'it company', 'software company'],
       a: () => `<b>Adnora Solutions</b>: <i>"Engineering Innovation. Accelerating Growth."</i> A web and app development company in Kochi that designs and builds modern web platforms and native mobile apps.` +
-        list(['Websites and landing pages', 'Web applications and custom software', 'Native mobile apps', 'E-commerce and online stores']) +
+        list(['Static &amp; dynamic websites', 'E-commerce websites and setup', 'Custom software &amp; applications', 'Mobile app development']) +
         `It sits next to Adnora Productions, so the product behind the marketing is as strong as the story.`,
       actions: ['solutions', 'whatsapp', 'call'],
       next: ['Adnora Productions', 'Get a quote', 'Contact Shaheen'] },
 
-    { id: 'studio', keys: ['adnora.in', 'studio', 'one studio', 'identity', 'brand identity', 'designed built'],
-      a: () => `<b>Adnora</b> (adnora.in): <i>"Designed, built, and taken to market."</i> Brand film, identity, campaigns, websites, software and online stores, made by one studio. The people who shoot, write and build share one floor.` +
-        list(['Video production', 'Digital marketing', 'Brand and content', 'Websites', 'Software', 'E-commerce']),
+    { id: 'studio', keys: ['adnora.in', 'studio', 'one studio', 'designed built'],
+      a: () => `<b>Adnora</b> (adnora.in): <i>"Designed, built, and taken to market."</i> Brand film, identity, campaigns, websites, software and online stores, made by one studio. The people who shoot, write and build share one floor.`,
       actions: ['adnora', 'email'],
-      next: ['Clients', 'Office address', 'Contact Shaheen'] },
+      next: ['Services', 'Office address', 'Contact Shaheen'] },
 
     { id: 'rentzo', keys: ['rentzo', 'real estate', 'realestate', 'property', 'properties', 'rent', 'rental', 'house', 'home', 'flat', 'apartment', 'listing', 'listings'],
-      a: () => `<b>Rentzo</b> is a real-estate platform based in Kerala, co-founded by Shaheen. It makes it simpler to <b>find, list and rent property</b> across Kerala, built by people who live here.`,
+      a: () => `<b>Rentzo</b> is a real-estate platform based in Kerala, co-founded by Shaheen. It makes it simpler to <b>find, list and rent property</b> across Kerala, built by people who live here. Rentzo is also an Adnora marketing client.`,
       actions: ['whatsapp', 'call'],
       next: ['Adnora Group', 'Contact Shaheen'] },
 
-    { id: 'clients', keys: ['client', 'clients', 'customers', 'brands', 'worked with', 'portfolio', 'case study', 'case studies', 'projects', 'testimonial', 'testimonials'],
-      a: () => `Brands that appear on Adnora's client list include:` +
-        list(['IKEA, Nestlé, Marriott, Garmin', 'LuLu Group International, Landmark Group, Joyalukkas', 'Federal Bank, Geojit, Synthite', 'Etihad Rail, Al-Qatami Group, Middlesex University Dubai, Star, Al Yasra Fashion']) +
-        `Adnora Productions has also worked with businesses like <b>Madreena Kitchen</b> and <b>Edufy Overseas</b>.`,
-      actions: ['adnora', 'productions'],
-      next: ['Services', 'Get a quote'] },
-
-    { id: 'services', keys: ['services', 'service', 'what do you do', 'what do they do', 'offer', 'offerings', 'help me', 'can you do', 'provide'],
-      a: () => `Across the Adnora Group you can get:` +
-        list(['<b>Marketing</b>: social media, SEO, content, Meta and Google Ads, lead generation', '<b>Film</b>: brand films, ads, reels, graphics', '<b>Brand</b>: identity and content', '<b>Software</b>: websites, web apps, mobile apps, e-commerce', '<b>Real estate</b>: renting and listings in Kerala through Rentzo']) +
-        `Tell me what you need and I'll point you to the right team, or reach Shaheen directly.`,
+    ...SERVICES.map((s, i) => ({
+      id: s.id, keys: s.keys,
+      a: () => `<b>${s.t}</b> at Adnora:` + list(s.items) + `Want this for your brand? Message Shaheen with a line about your business.`,
       actions: ['whatsapp', 'call'],
-      next: ['Get a quote', 'Clients', 'Contact Shaheen'] },
+      next: [SERVICES[(i + 1) % SERVICES.length].t.replace(/&amp;/g, '&'), 'All services', 'Get a quote']
+    })),
 
-    { id: 'quote', keys: ['quote', 'price', 'pricing', 'cost', 'charge', 'rate', 'rates', 'budget', 'package', 'hire', 'proposal', 'estimate', 'how much', 'start a project', 'project', 'collaborate', 'collaboration', 'partnership', 'partner', 'invest', 'investment'],
-      a: () => `Pricing depends on the scope, so the quickest way is to speak to Shaheen directly. Send a WhatsApp with a line about your brand and what you need (campaign, film, website, app or property) and he'll get back to you.`,
+    { id: 'services', keys: ['services', 'service', 'all services', 'what do you do', 'what do they do', 'offer', 'offerings', 'help me', 'can you do', 'provide', 'portfolio of services', 'service list'],
+      a: () => `Adnora's services, across <b>Creative</b> (branding &amp; content), <b>Growth</b> (marketing &amp; consultation) and <b>Technology</b> (web &amp; software):` +
+        list(SERVICES.map(s => `<b>${s.t}</b>: ${s.items.length} services`)) +
+        `Tap a category below for the full list, or tell me what you need.`,
+      actions: ['whatsapp', 'call'],
+      next: SERVICES.map(s => s.t.replace(/&amp;/g, '&')) },
+
+    { id: 'clients', keys: ['client', 'clients', 'customers', 'brands', 'worked with', 'portfolio', 'case study', 'case studies', 'projects', 'work done', ...CLIENT_KEYS],
+      a: () => `Adnora has worked with brands across food, hospitality, education, travel, interiors, beauty, health and finance, including:` +
+        list(CLIENTS) +
+        `Clients come from <b>${COUNTRIES.join(', ')}</b>.`,
+      actions: ['google', 'whatsapp'],
+      next: ['Countries', 'Reviews', 'Services'] },
+
+    { id: 'countries', keys: ['country', 'countries', 'international', 'global', 'abroad', 'overseas', 'outside india', 'gulf', 'gcc', 'middle east', 'saudi', 'saudi arabia', 'ksa', 'riyadh', 'jeddah', 'uae', 'dubai', 'abu dhabi', 'sharjah', 'qatar', 'doha', 'bahrain', 'manama', 'uzbekistan', 'tashkent', 'georgia', 'tbilisi', 'india', 'remote'],
+      a: () => `Adnora has delivered <b>marketing, video production and software development</b> for clients in ${COUNTRIES.length} countries:` +
+        list(COUNTRIES.map(c => `<b>${c}</b>`)) +
+        `The team works from Kochi and runs projects remotely for clients abroad, so wherever you are, you can start with a WhatsApp message or a call.`,
       actions: ['whatsapp', 'call', 'email'],
-      next: ['Services', 'Office address'] },
+      next: ['Clients', 'Services', 'Get a quote'] },
+
+    { id: 'reviews', keys: ['review', 'reviews', 'rating', 'ratings', 'rated', 'stars', 'feedback', 'trust', 'reliable', 'recommend', 'google rating'],
+      a: () => `Adnora Productions is rated <b>5.0 ★ from 32 reviews</b> on Google. Reviewers mention:` +
+        list(['Clear communication and smooth coordination on collaborations, including Qasr Laban\'s Palakkad outlet', 'A supportive, professional influencer marketing team', 'A friendly, creative team that is strong at digital marketing and brand promotion', 'Recommended for social media marketing in Kerala']),
+      actions: ['google', 'whatsapp'],
+      next: ['Clients', 'Services'] },
+
+    { id: 'hours', keys: ['hours', 'timing', 'timings', 'open', 'opening', 'closed', 'working hours', 'office hours', 'sunday', 'saturday', 'what time'],
+      a: () => `Office hours:` + list(['<b>Monday to Saturday</b>: 9 AM to 8 PM', '<b>Sunday</b>: closed']) + `WhatsApp messages are welcome anytime; Shaheen will reply during working hours.`,
+      actions: ['whatsapp', 'call', 'maps'],
+      next: ['Office address', 'Contact Shaheen'] },
+
+    { id: 'quote', keys: ['quote', 'price', 'pricing', 'cost', 'charge', 'rate', 'rates', 'budget', 'package', 'packages', 'hire', 'proposal', 'estimate', 'how much', 'start a project', 'project', 'partnership', 'partner', 'invest', 'investment'],
+      a: () => `Pricing depends on the scope, so the quickest way is to speak to Shaheen directly. Send a WhatsApp with a line about your brand and what you need (branding, marketing, video, SEO, website, app or property) and he'll get back to you.`,
+      actions: ['whatsapp', 'call', 'email'],
+      next: ['Services', 'Office hours'] },
 
     { id: 'contact', keys: ['contact', 'call', 'phone', 'number', 'mobile', 'whatsapp', 'reach', 'talk', 'speak', 'meet', 'meeting', 'message', 'connect', 'touch', 'email', 'mail', 'appointment', 'book'],
       a: () => `You can reach Shaheen directly:` +
-        list([`Phone and WhatsApp: <a href="tel:${PHONE}">${PHONE_PRETTY}</a>`, `Email: <a href="mailto:${EMAIL}">${EMAIL}</a>`, `LinkedIn: ${ext(LINKEDIN, 'Mohammed Shaheen')}`]) +
+        list([`Phone and WhatsApp: <a href="tel:${PHONE}">${PHONE_PRETTY}</a>`, `Email: <a href="mailto:${EMAIL}">${EMAIL}</a>`, `LinkedIn: ${ext(LINKEDIN, 'Mohammed Shaheen')}`, 'Office hours: Mon to Sat, 9 AM to 8 PM']) +
         `Tap a button below to start.`,
       actions: ['call', 'whatsapp', 'email', 'linkedin'],
       next: ['Office address', 'Get a quote'] },
 
-    { id: 'address', keys: ['address', 'office', 'location', 'located', 'where', 'kochi', 'cochin', 'kerala', 'kadavanthra', 'visit', 'map', 'directions', 'india'],
-      a: () => `Adnora's studio is in <b>Kadavanthra, Kochi</b>:<br>Room 318, Fourth Floor, DD Vyapar Bhavan, KP Vallon Road, Girinagar, Kerala 682020.<br><br>Please call or WhatsApp before you visit.`,
-      actions: ['call', 'whatsapp', { k: 'web', icon: I.web, label: 'Open in Maps', href: 'https://maps.google.com/?q=' + encodeURIComponent('DD Vyapar Bhavan, KP Vallon Road, Kadavanthra, Kochi 682020'), ext: true }],
-      next: ['Contact Shaheen', 'Adnora Group'] },
+    { id: 'address', keys: ['address', 'office', 'location', 'located', 'where', 'kochi', 'cochin', 'kerala', 'kadavanthra', 'ernakulam', 'visit', 'map', 'maps', 'directions'],
+      a: () => `Adnora's office is in <b>Kadavanthra, Kochi</b>:<br>Room No. 318, Fourth Floor, DD Vyapar Bhavan, KP Vallon Road, Giri Nagar Housing Colony, Kadavanthra, Kochi, Ernakulam, Kerala 682020.<br><br>Open Monday to Saturday, 9 AM to 8 PM. Please call or WhatsApp before you visit.`,
+      actions: ['maps', 'call', 'whatsapp'],
+      next: ['Office hours', 'Contact Shaheen'] },
 
-    { id: 'social', keys: ['social', 'instagram', 'insta', 'linkedin', 'follow', 'profiles', 'handle'],
-      a: () => `Follow along:` + list([`LinkedIn: ${ext(LINKEDIN, 'Mohammed Shaheen')}`, `Instagram: ${ext(INSTAGRAM, '@adnora.in')}`]),
-      actions: ['linkedin', 'instagram'],
+    { id: 'social', keys: ['instagram', 'insta', 'linkedin', 'follow', 'profiles', 'handle', 'socials'],
+      a: () => `Follow along:` + list([`LinkedIn: ${ext(LINKEDIN, 'Mohammed Shaheen')}`, `Instagram: ${ext(INSTAGRAM, '@adnora.in')}`, `Google: ${ext(GBP, 'Adnora Productions')}`]),
+      actions: ['linkedin', 'instagram', 'google'],
       next: ['Adnora Group', 'Contact Shaheen'] },
 
     { id: 'sites', keys: ['site', 'sites', 'link', 'links', 'url', 'websites of'],
@@ -156,13 +212,16 @@
   const CHIP = {
     'who is shaheen?': 'about', 'adnora companies': 'group', 'adnora group': 'group',
     'adnora productions': 'productions', 'adnora solutions': 'solutions', 'rentzo': 'rentzo',
-    'services': 'services', 'clients': 'clients', 'get a quote': 'quote', 'contact shaheen': 'contact',
-    'office address': 'address'
+    'services': 'services', 'all services': 'services', 'clients': 'clients', 'countries': 'countries', 'reviews': 'reviews',
+    'get a quote': 'quote', 'contact shaheen': 'contact', 'office address': 'address', 'office hours': 'hours'
   }
+  SERVICES.forEach(s => { CHIP[s.t.replace(/&amp;/g, '&').toLowerCase()] = s.id })
 
   const norm = s => ' ' + s.toLowerCase().replace(/[^a-z0-9.\s-]/g, ' ').replace(/\s+/g, ' ').trim() + ' '
   function match (text) {
-    const t = norm(text)
+    let t = norm(text)
+    // also match singular forms ("logos" -> "logo")
+    t += t.trim().split(' ').filter(w => w.length > 3 && w.endsWith('s') && !w.endsWith('ss')).map(w => w.slice(0, -1)).join(' ') + ' '
     const direct = CHIP[text.trim().toLowerCase()]
     if (direct) return KB.find(k => k.id === direct)
     let best = null, score = 0
@@ -180,7 +239,7 @@
   }
 
   const FALLBACK = {
-    a: () => `I'm not sure about that one yet. I can tell you about <b>Shaheen</b>, the <b>Adnora Group</b> and its companies, services, clients and contact details. For anything else, Shaheen can answer you directly.`,
+    a: () => `I'm not sure about that one yet. I can tell you about <b>Shaheen</b>, the <b>Adnora Group</b>, our services, clients, countries, reviews, office hours and contact details. For anything else, Shaheen can answer you directly.`,
     actions: ['whatsapp', 'call'],
     next: ['Who is Shaheen?', 'Adnora companies', 'Services']
   }
@@ -365,8 +424,8 @@ body.has-nora .fab{right:calc(max(16px,env(safe-area-inset-right,0px)) + 70px)}
       if (!started) {
         started = true
         addBot({
-          a: () => `Hi, I'm <b>Nora</b> 👋 Shaheen VP's AI assistant.<br>Ask me about Shaheen, the <b>Adnora Group</b>, its services and clients, or reach him straight away with the buttons above.`,
-          next: ['Who is Shaheen?', 'Adnora companies', 'Services', 'Get a quote', 'Contact Shaheen']
+          a: () => `Hi, I'm <b>Nora</b> 👋 Shaheen VP's AI assistant.<br>Ask me about Shaheen, the <b>Adnora Group</b>, our services, clients and the countries we work in, or reach him straight away with the buttons above.`,
+          next: ['Who is Shaheen?', 'Services', 'Clients', 'Countries', 'Contact Shaheen']
         })
       }
       if (!mobile()) setTimeout(() => input.focus(), 50)
