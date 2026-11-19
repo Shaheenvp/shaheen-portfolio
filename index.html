@@ -1,0 +1,695 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Shaheen VP — Founder & Managing Director, Adnora Group</title>
+<meta name="description" content="Shaheen VP, Founder & Managing Director of the Adnora Group of Companies: Adnora Productions, Adnora Solutions, and co-founder of Rentzo, a Kerala real-estate platform.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Onest:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+/* Layout: cinematic dark one-pager, rem grid authored at 1920px. Palette follows Adnora's brand: near-black with its signature green. */
+:root{
+  --background:#060805; --foreground:#f2f5ee; --surface:#0e120b; --surface-2:#151b10;
+  --muted:#848b7c; --line:rgba(242,245,238,0.1); --line-strong:rgba(242,245,238,0.22);
+  --accent:#6db526; --accent-2:#9fd05f; --glow:109,181,38;
+  --font-display:"Anton","Arial Narrow",Impact,sans-serif;
+  --font-sans:"Onest",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --gutter:2.5rem; --section:9rem;
+  --fs-mega:13rem; --fs-display:7.5rem; --fs-h1:5rem; --fs-h2:3.25rem; --fs-h3:1.75rem;
+  --fs-lead:1.375rem; --fs-body:1.0625rem; --fs-eyebrow:0.8125rem;
+  --expo:cubic-bezier(0.16,1,0.3,1); --quart:cubic-bezier(0.165,0.84,0.44,1); --wipe:cubic-bezier(0.22,1,0.36,1);
+  color-scheme:dark;
+}
+html{font-size:16px;background:#060805}
+@media (max-width:1920px){html{font-size:0.833333vw}}
+@media (max-width:1440px){html{font-size:1.111111vw}}
+@media (max-width:1024px){html{font-size:1.5625vw}}
+@media (max-width:640px){html{font-size:4.444444vw} :root{--gutter:16px}}
+
+*{margin:0;padding:0;box-sizing:border-box}
+img{display:block;max-width:100%}
+ul,ol{list-style:none}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;cursor:pointer;-webkit-appearance:none;appearance:none}
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-stopped{overflow:hidden}
+body{background:#060805;color:var(--foreground);font-family:var(--font-sans);font-size:var(--fs-body);line-height:1.6;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;overflow-x:hidden}
+::selection{background:var(--accent);color:#060805}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+body::after{content:"";position:fixed;inset:-50%;z-index:95;pointer-events:none;opacity:.055;background-size:180px;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* shared */
+.eyebrow{display:flex;align-items:center;gap:.75rem;font-size:var(--fs-eyebrow);line-height:1.2;font-weight:500;text-transform:uppercase;letter-spacing:.22em;color:var(--muted)}
+.eyebrow::before{content:"";width:.5rem;height:.5rem;border-radius:9999px;background:var(--accent);flex:none}
+.display{font-family:var(--font-display);font-weight:400;text-transform:uppercase;letter-spacing:-.01em}
+.sec{padding:var(--section) var(--gutter)}
+.head-row{display:flex;flex-direction:column;gap:1.5rem}
+@media (min-width:640px){.head-row{flex-direction:row;align-items:flex-end;justify-content:space-between}}
+.sec-h{margin-top:1.5rem;font-size:var(--fs-h2);line-height:.95}
+@media (min-width:640px){.sec-h.big{font-size:var(--fs-h1)}}
+.side-label{font-size:var(--fs-eyebrow);line-height:1.2;text-transform:uppercase;letter-spacing:.22em;color:var(--muted)}
+.grid12{display:grid;gap:3rem}
+@media (min-width:1024px){.grid12{grid-template-columns:repeat(12,1fr);gap:var(--gutter)}.c6{grid-column:span 6}.c5{grid-column:span 5}.c7{grid-column:span 7}.c3{grid-column:span 3}}
+.c6,.c5,.c7{min-width:0}
+
+/* text reveals */
+.line{display:block;overflow:hidden;padding-bottom:.06em;margin-bottom:-.06em}
+.line>span{display:inline-block;transform:translateY(110%);opacity:0;transition:transform .9s var(--expo),opacity .9s var(--expo)}
+.go .line>span{transform:none;opacity:1}
+.ch{display:inline-block;transform:translateY(100%);opacity:0;transition:transform .9s var(--expo),opacity .9s var(--expo)}
+.go .ch{transform:none;opacity:1}
+.wd{display:inline-block;transform:translateY(18px);opacity:0}
+.wd.on{transform:none;opacity:1;transition:transform .52s var(--quart),opacity .52s var(--quart)}
+.rise{opacity:0;transform:translateY(var(--y,16px));transition:opacity var(--d,.56s) var(--expo),transform var(--d,.56s) var(--expo);transition-delay:var(--delay,0ms)}
+.rise.in{opacity:1;transform:none}
+
+/* 1 · preloader */
+.pre{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;gap:.75rem;
+  padding:max(var(--gutter),env(safe-area-inset-top,0px)) max(var(--gutter),env(safe-area-inset-right,0px)) max(var(--gutter),env(safe-area-inset-bottom,0px)) max(var(--gutter),env(safe-area-inset-left,0px));
+  transition:transform .65s var(--wipe)}
+.pre::before{content:"";position:absolute;inset:0;z-index:-10;background:var(--background)}
+@media (min-width:640px){.pre{flex-direction:row;align-items:flex-end;justify-content:space-between;gap:1rem}}
+.pre__brand{font-family:var(--font-display);font-size:var(--fs-h3);text-transform:uppercase;line-height:1;letter-spacing:-.01em}
+.pre__count{font-family:var(--font-display);font-size:var(--fs-display);line-height:1;font-variant-numeric:tabular-nums}
+.pre__count i{font-style:normal;color:var(--accent)}
+.pre__bar{position:absolute;left:0;bottom:0;height:2px;width:100%;background:var(--accent);transform-origin:0 50%;transform:scaleX(var(--p,0))}
+.pre.fade .pre__brand,.pre.fade .pre__count,.pre.fade .pre__bar{opacity:0;transition:opacity .3s ease}
+.pre.wipe{transform:translateY(-100%)}
+.pre.done{pointer-events:none;visibility:hidden}
+
+/* 2 · nav */
+.site-nav{position:fixed;inset-inline:0;top:0;z-index:50;pointer-events:none}
+.site-nav nav{pointer-events:auto;display:flex;align-items:center;justify-content:flex-end;
+  padding:calc(1.5rem + env(safe-area-inset-top,0px)) max(var(--gutter),env(safe-area-inset-right,0px)) 1.5rem max(var(--gutter),env(safe-area-inset-left,0px));
+  transition:background .4s ease,padding .4s var(--expo),box-shadow .4s ease}
+.site-nav.scrolled nav{background:rgba(6,8,5,.62);-webkit-backdrop-filter:blur(18px) saturate(140%);backdrop-filter:blur(18px) saturate(140%);box-shadow:0 1px 0 var(--line);padding-block:calc(1rem + env(safe-area-inset-top,0px)) 1rem}
+.nav-links{display:none;gap:2.5rem}
+@media (min-width:768px){.nav-links{display:flex}}
+.nav-links a{position:relative;font-size:var(--fs-eyebrow);font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--muted);transition:color .3s ease}
+.nav-links a::after{content:"";position:absolute;bottom:-.25rem;left:0;height:1px;width:0;background:var(--accent);transition:width .35s var(--expo)}
+.nav-links a:hover{color:var(--foreground)}
+.nav-links a:hover::after{width:100%}
+.burger{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.375rem;width:2.5rem;height:2.5rem;position:relative;z-index:60}
+@media (min-width:768px){.burger{display:none}}
+.burger span{height:.125rem;width:1.5rem;background:var(--foreground);transition:transform .4s var(--expo),opacity .3s ease}
+.burger[aria-expanded="true"] span:nth-child(1){transform:translateY(.5rem) rotate(45deg)}
+.burger[aria-expanded="true"] span:nth-child(2){opacity:0}
+.burger[aria-expanded="true"] span:nth-child(3){transform:translateY(-.5rem) rotate(-45deg)}
+.mmenu{position:fixed;inset:0;z-index:50;background:var(--background);display:flex;flex-direction:column;justify-content:center;padding-inline:var(--gutter);
+  opacity:0;visibility:hidden;transition:opacity .45s ease-out,visibility 0s linear .45s}
+.mmenu.open{opacity:1;visibility:visible;transition:opacity .45s ease-out,visibility 0s}
+.mmenu ul{display:flex;flex-direction:column;gap:1rem}
+.mmenu li{display:flex;align-items:baseline;gap:1rem}
+.mmenu li span{font-size:.75rem;letter-spacing:.18em;color:var(--accent);font-variant-numeric:tabular-nums}
+.mmenu ul a{display:block;font-family:var(--font-display);font-size:var(--fs-h2);text-transform:uppercase;line-height:1;letter-spacing:-.01em;
+  opacity:0;transform:translateY(48px);transition:opacity .42s ease-out,transform .42s ease-out}
+.mmenu.open ul a{opacity:1;transform:none}
+.mmenu__foot{position:absolute;left:var(--gutter);right:var(--gutter);bottom:max(2rem,calc(env(safe-area-inset-bottom,0px) + 1rem));display:grid;gap:.4rem;
+  font-size:.9rem;color:var(--muted);opacity:0;transition:opacity .45s ease-out .35s}
+.mmenu.open .mmenu__foot{opacity:1}
+.mmenu__foot a{color:var(--foreground)}
+@media (min-width:768px){.mmenu{display:none}}
+
+/* 3 · hero */
+.hero{position:relative;display:flex;flex-direction:column;min-height:100svh;overflow:hidden}
+.hero::before{content:"";position:absolute;left:50%;bottom:-18vh;width:min(130vw,1500px);height:85vh;transform:translateX(-50%);z-index:5;pointer-events:none;
+  background:radial-gradient(closest-side,rgba(var(--glow),.10),rgba(var(--glow),.03) 55%,transparent)}
+.hero::after{content:"";position:absolute;inset:0;z-index:4;pointer-events:none;background:radial-gradient(90% 60% at 50% 0%,rgba(242,245,238,.04),transparent 70%)}
+.hero__top{position:relative;z-index:30;display:flex;flex-direction:column;gap:2rem;padding:calc(7rem + env(safe-area-inset-top,0px)) var(--gutter) 0}
+@media (min-width:640px){.hero__top{flex-direction:row;align-items:flex-start;justify-content:space-between;padding-top:8rem}}
+.roles{font-family:var(--font-display);font-weight:400;text-transform:uppercase;line-height:1.05;letter-spacing:-.01em;font-size:var(--fs-h3)}
+@media (min-width:640px){.roles{font-size:var(--fs-h2)}}
+.roles .line>span{transition-duration:.76s}
+.hero__desc{max-width:27rem;font-size:var(--fs-body);color:var(--muted)}
+@media (min-width:640px){.hero__desc{text-align:right}}
+.hero__desc b{color:var(--foreground);font-weight:500}
+/* portrait slot: shown once a cut-out photo is added (data-src on .portrait) */
+.portrait{position:absolute;bottom:0;left:50%;transform:translateX(-50%);z-index:20;height:86vh;width:60vw;pointer-events:none}
+@media (min-width:1024px){.portrait{height:93vh;width:52vw}}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:contain;object-position:center bottom;
+  filter:drop-shadow(0 2rem 3rem rgba(0,0,0,.55));
+  opacity:0;transform:translateY(5%) scale(1.03);transform-origin:50% 100%;transition:opacity 1.2s var(--expo),transform 1.6s var(--expo)}
+.portrait.in img{opacity:1;transform:none}
+/* faint neutral backlight behind his head and shoulders */
+.portrait::before{content:"";position:absolute;z-index:-1;left:50%;top:6%;height:70%;aspect-ratio:1;transform:translateX(-50%);
+  background:radial-gradient(closest-side,rgba(242,245,238,.07),rgba(242,245,238,.02) 55%,transparent 72%);opacity:0;transition:opacity 1.6s ease .2s}
+.portrait.in::before{opacity:1}
+.hero__fade{position:absolute;inset-inline:0;bottom:0;z-index:20;height:20vh;background:linear-gradient(to bottom,transparent,#060805);pointer-events:none}
+.hero__name{position:absolute;inset-inline:0;bottom:0;z-index:10;transform:translateY(var(--name-y,-4%));display:flex;flex-direction:column;align-items:center;
+  font-family:var(--font-display);font-weight:400;text-transform:uppercase;line-height:.78;letter-spacing:-.01em;color:var(--accent);font-size:var(--name-fs,var(--fs-mega))}
+.hero__name>span{display:block;white-space:nowrap}
+.hero__name>span+span{align-self:flex-end;margin-right:var(--kv-shift,0px)}
+.cue{position:absolute;bottom:2rem;left:var(--gutter);z-index:30;display:flex;align-items:center;gap:.75rem;font-size:var(--fs-eyebrow);text-transform:uppercase;letter-spacing:.22em;color:var(--muted)}
+.cue::before{content:"";width:2.5rem;height:1px;background:var(--accent)}
+.hero.no-portrait .portrait{display:none}
+@media (max-width:639px){
+  .hero{height:100svh}
+  .hero__top{position:static;padding-top:min(6.25rem,13svh)}
+  .roles{position:relative;z-index:30;font-size:min(2.6rem,5.2svh)}
+  .portrait{width:124vw;height:68svh}
+  .hero__name{bottom:44svh;--name-y:0%}
+  .hero.no-portrait .hero__name{bottom:30svh}
+  .hero__fade{height:42svh;background:linear-gradient(to bottom,transparent,rgba(6,8,5,.82) 55%,#060805)}
+  .hero__desc{position:absolute;left:var(--gutter);right:var(--gutter);bottom:calc(4.2rem + env(safe-area-inset-bottom,0px));z-index:30;
+    font-size:.98rem;line-height:1.55;color:rgba(242,245,238,.72)}
+  .cue{bottom:calc(1.6rem + env(safe-area-inset-bottom,0px))}
+}
+
+/* 4 · marquee */
+.marquee{overflow:hidden;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding-block:2rem}
+.marquee__track{display:flex;width:max-content;flex-wrap:nowrap;animation:marquee 26s linear infinite}
+.marquee__item{display:flex;align-items:center;font-family:var(--font-display);font-size:var(--fs-h2);line-height:1;text-transform:uppercase;letter-spacing:-.01em;white-space:nowrap}
+.marquee__item::after{content:"";margin-inline:2rem;width:.625rem;height:.625rem;border-radius:9999px;background:var(--accent)}
+.marquee__item:nth-child(even){color:transparent;-webkit-text-stroke:1px rgba(242,245,238,.55)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* 5 · story */
+.story-h{max-width:15ch}
+.lead{margin-top:2rem;max-width:46ch;font-size:var(--fs-lead);line-height:1.45;color:var(--muted)}
+.lead b{color:var(--foreground);font-weight:500}
+@media (min-width:1024px){.principles{padding-top:.5rem}}
+.principles li{display:grid;grid-template-columns:auto 1fr;column-gap:1.5rem;border-top:1px solid var(--line);padding:2rem 0}
+.principles li:last-child{border-bottom:1px solid var(--line)}
+.principles .n{font-size:var(--fs-h3);line-height:1.15;font-weight:600;font-variant-numeric:tabular-nums;color:var(--accent)}
+.principles h3{font-size:var(--fs-h3);line-height:1.15;font-weight:600;letter-spacing:-.01em}
+.principles p{margin-top:.75rem;max-width:44ch;color:var(--muted)}
+
+/* 6 · ventures — typographic company panels (no stock imagery) */
+.ventures{margin-top:4rem;display:grid;row-gap:4rem}
+@media (min-width:768px){.ventures{grid-template-columns:1fr 1fr;column-gap:var(--gutter)}.ventures>li:nth-child(even){margin-top:6rem}}
+.ventures>li{min-width:0}
+.panel{position:relative;aspect-ratio:16/11;border-radius:.25rem;overflow:hidden;isolation:isolate;
+  background:radial-gradient(120% 120% at 20% 10%,var(--tint,rgba(var(--glow),.14)),transparent 55%),
+             radial-gradient(90% 90% at 100% 100%,rgba(255,255,255,.05),transparent 60%),var(--surface);
+  box-shadow:inset 0 0 0 1px var(--line)}
+.panel.reveal{clip-path:inset(100% 0 0 0);transition:clip-path 1.3s cubic-bezier(.77,0,.18,1)}
+.panel.reveal.in{clip-path:inset(0 0 0 0)}
+.panel__glyph{position:absolute;right:-.04em;bottom:-.2em;font-family:var(--font-display);font-size:24rem;line-height:1;color:transparent;
+  -webkit-text-stroke:1px rgba(242,245,238,.14);transform:translateY(12%);transition:transform 1.8s var(--expo)}
+.panel.in .panel__glyph{transform:none}
+.panel__word{position:absolute;left:1.75rem;top:1.5rem;right:1.75rem;display:flex;justify-content:space-between;gap:1rem;
+  font-size:var(--fs-eyebrow);text-transform:uppercase;letter-spacing:.22em;color:rgba(242,245,238,.7)}
+.panel__name{position:absolute;left:1.75rem;bottom:1.5rem;font-family:var(--font-display);font-size:var(--fs-h1);line-height:.9;text-transform:uppercase;letter-spacing:-.01em;max-width:9ch}
+.panel__tags{position:absolute;left:1.75rem;right:1.75rem;top:4rem;display:flex;flex-wrap:wrap;gap:.5rem}
+.panel__tags span{font-size:.8rem;padding:.4rem .8rem;border-radius:999px;border:1px solid var(--line-strong);color:rgba(242,245,238,.88);background:rgba(6,8,5,.4);
+  -webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.vrow{margin-top:1.5rem;border-top:1px solid var(--line);padding-top:1.25rem;display:flex;align-items:flex-start;justify-content:space-between;gap:1.5rem}
+.vrow h3{font-size:var(--fs-h3);line-height:1.15;font-weight:600;letter-spacing:-.01em}
+.vrow p{margin-top:.5rem;max-width:42ch;color:var(--muted)}
+.vmeta{flex:none;text-align:right}
+.vmeta span{display:block;font-size:var(--fs-eyebrow);line-height:1.2;text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+.vmeta b{display:block;margin-top:.5rem;font-size:var(--fs-eyebrow);line-height:1.2;font-weight:500;text-transform:uppercase;letter-spacing:.18em;color:var(--accent)}
+.vcat{margin-top:.75rem;font-size:var(--fs-eyebrow);line-height:1.2;text-transform:uppercase;letter-spacing:.22em;color:var(--muted)}
+.vcat b{color:var(--foreground);font-weight:500;margin-right:.75rem}
+
+/* 7 · structure (group map) */
+.map{margin-top:4rem;display:grid;border-top:1px solid var(--line)}
+@media (min-width:640px){.map{grid-template-columns:1fr 1fr}.map>div:nth-child(2n){border-left:1px solid var(--line);padding-left:2rem}}
+@media (min-width:1024px){.map{grid-template-columns:repeat(4,1fr)}.map>div{padding-block:3rem!important}.map>div:not(:nth-child(4n+1)){border-left:1px solid var(--line);padding-left:2rem}}
+.map>div{display:flex;flex-direction:column;gap:1rem;border-bottom:1px solid var(--line);padding:2.5rem 0}
+.map dd{order:-1;font-family:var(--font-display);font-size:var(--fs-display);line-height:1;letter-spacing:-.01em;font-variant-numeric:tabular-nums;text-transform:uppercase}
+.map dd em{font-style:normal;color:var(--accent)}
+.map dt{max-width:22ch;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.caps{margin-top:3rem;display:grid;gap:1.25rem}
+.caps p{display:grid;gap:.4rem}
+@media (min-width:768px){.caps p{grid-template-columns:14rem 1fr;gap:1.5rem}}
+.caps p span{font-size:var(--fs-eyebrow);text-transform:uppercase;letter-spacing:.22em;color:var(--muted);padding-top:.25rem}
+
+/* 8 · what we make (selector) */
+.make{margin-top:4rem}
+.vlist button{width:100%;display:flex;align-items:baseline;gap:1.25rem;border-top:1px solid var(--line);padding:1.75rem 0;text-align:left}
+.vlist li:last-child button{border-bottom:1px solid var(--line)}
+.vlist .idx{font-size:var(--fs-eyebrow);font-variant-numeric:tabular-nums;letter-spacing:.18em;color:var(--muted);transition:color .3s}
+.vlist .who{flex:1}
+.vlist .nm{display:block;font-size:var(--fs-h3);line-height:1.15;font-weight:600;letter-spacing:-.01em;color:var(--muted);transition:color .3s}
+.vlist .rl{display:block;margin-top:.25rem;font-size:var(--fs-eyebrow);text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+.vlist .rule{height:1px;width:0;background:var(--accent);align-self:center;transition:width .45s var(--expo)}
+.vlist [aria-selected="true"] .idx{color:var(--accent)}
+.vlist [aria-selected="true"] .nm{color:var(--foreground)}
+.vlist [aria-selected="true"] .rule{width:2.5rem}
+.feat blockquote p{max-width:30ch;font-size:var(--fs-h3);font-weight:500;line-height:1.3;letter-spacing:-.01em;min-height:5.2em}
+.feat footer{margin-top:2rem;font-size:var(--fs-eyebrow);text-transform:uppercase;letter-spacing:.18em;color:var(--muted)}
+.chips{margin-top:2rem;display:flex;flex-wrap:wrap;gap:.6rem}
+.feat{display:grid;gap:2rem}
+@media (min-width:640px){.feat{grid-template-columns:1fr auto;align-items:start}}
+.feat__img{position:relative;width:100%;aspect-ratio:4/5;overflow:hidden;border-radius:.125rem;background:var(--surface);box-shadow:inset 0 0 0 1px var(--line)}
+@media (min-width:640px){.feat__img{width:17rem}}
+.feat__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%;transform:scale(1.18);transition:transform 1.9s var(--expo)}
+.feat__img.reveal{clip-path:inset(100% 0 0 0);transition:clip-path 1.3s cubic-bezier(.77,0,.18,1)}
+.feat__img.in{clip-path:inset(0 0 0 0)}
+.feat__img.in img{transform:none}
+@media (max-width:639px){.feat__img{display:none}}
+.chips span{font-size:.9rem;padding:.55rem 1rem;border-radius:999px;border:1px solid var(--line-strong);color:var(--foreground)}
+
+/* 9 · contact */
+.contact{padding:var(--section) var(--gutter) 0;padding-left:max(var(--gutter),env(safe-area-inset-left,0px));padding-right:max(var(--gutter),env(safe-area-inset-right,0px))}
+.contact-h{margin-top:1.5rem;max-width:17ch;font-size:var(--fs-h1);line-height:.95}
+@media (min-width:640px){.contact-h{font-size:var(--fs-display)}}
+.cta{margin-top:3rem;display:inline-flex;align-items:baseline;gap:.75rem;font-size:var(--fs-h3);font-weight:600;letter-spacing:-.01em;transition:color .34s ease-out}
+@media (min-width:640px){.cta{gap:1rem;font-size:var(--fs-h1);line-height:1}}
+.cta i{font-style:normal;color:var(--accent)}
+.cta:hover{color:var(--accent)}
+.fbar{margin-top:var(--section);border-top:1px solid var(--line);padding:3rem 0 calc(3rem + env(safe-area-inset-bottom,0px));display:grid;gap:2.5rem}
+@media (min-width:1024px){.fbar{grid-template-columns:repeat(12,1fr)}}
+.sig{font-family:var(--font-display);font-size:var(--fs-h2);text-transform:uppercase;line-height:1;letter-spacing:-.01em}
+.fbar small{display:block;margin-top:1rem;font-size:var(--fs-eyebrow);text-transform:uppercase;letter-spacing:.22em;color:var(--muted)}
+.social{display:grid;gap:.6rem}
+.social a{display:inline-flex;align-items:center;color:var(--muted);transition:color .3s}
+.social a::before{content:"";height:1px;width:0;background:var(--accent);margin-right:0;transition:width .35s var(--expo),margin .35s var(--expo)}
+.social a:hover{color:var(--foreground)}
+.social a:hover::before{width:1.5rem;margin-right:.75rem}
+.copy{font-size:var(--fs-eyebrow);text-transform:uppercase;letter-spacing:.18em;color:var(--muted);line-height:1.6}
+@media (min-width:1024px){.copy{text-align:right}}
+.fab{position:fixed;right:max(16px,env(safe-area-inset-right,0px));bottom:max(16px,calc(env(safe-area-inset-bottom,0px) + 10px));z-index:40;
+  display:none;align-items:center;gap:.6rem;padding:.85rem 1.15rem;border-radius:999px;background:var(--accent);color:#060805;font-weight:600;font-size:.85rem;letter-spacing:.04em;
+  box-shadow:0 12px 26px -12px rgba(0,0,0,.7);transform:translateY(140%);transition:transform .5s var(--expo)}
+.fab.show{transform:none}
+
+/* phones */
+@media (max-width:639px){
+  :root{--section:5.5rem}
+  .fab{display:inline-flex}
+  .marquee{padding-block:1.4rem}
+  .marquee__item{font-size:2.4rem}
+  .marquee__item::after{margin-inline:1.25rem;width:.5rem;height:.5rem}
+  .sec-h{font-size:3.1rem;line-height:.95}
+  .lead{font-size:1.1rem;margin-top:1.4rem}
+  .principles li{padding:1.5rem 0;column-gap:1rem}
+  .principles .n,.principles h3{font-size:1.3rem}
+  .principles p{font-size:.98rem}
+  .ventures{margin-top:2.5rem;row-gap:3.5rem}
+  .panel__glyph{font-size:15rem}
+  .panel__name{font-size:3rem}
+  .panel__word,.panel__tags{left:1.1rem;right:1.1rem}
+  .panel__name{left:1.1rem;bottom:1.1rem}
+  .panel__tags{top:3.2rem}
+  .vrow{flex-direction:column;gap:.75rem;margin-top:1.1rem;padding-top:1rem}
+  .vrow h3{font-size:1.45rem}
+  .vmeta{text-align:left;display:flex;gap:1rem;align-items:baseline}
+  .vmeta b{margin-top:0}
+  .map{grid-template-columns:1fr 1fr;margin-top:2.5rem}
+  .map>div{padding:1.6rem 0;gap:.6rem}
+  .map>div:nth-child(2n){border-left:1px solid var(--line);padding-left:1rem}
+  .map dd{font-size:3.9rem}
+  .map dt{font-size:.78rem;letter-spacing:.1em}
+  .make{margin-top:2.5rem}
+  .make .feat{order:1}
+  .make .vlist{order:2}
+  .vlist button{padding:1.15rem 0}
+  .vlist .nm{font-size:1.3rem}
+  .feat blockquote p{font-size:1.4rem;min-height:6.6em}
+  .contact-h{font-size:3.6rem}
+  .cta{font-size:1.6rem;margin-top:2rem}
+  .fbar{padding-bottom:calc(6rem + env(safe-area-inset-bottom,0px))}
+}
+@media (prefers-reduced-motion:reduce){
+  .pre{display:none}
+  .marquee__track{animation:none}
+  .line>span,.ch,.wd,.rise,.mmenu ul a,.panel__glyph{opacity:1!important;transform:none!important;transition:none!important}
+  .panel.reveal,.feat__img.reveal{clip-path:none!important;transition:none!important}
+  .feat__img img{transform:none!important;transition:none!important}
+  .portrait img,.portrait::before{opacity:1!important;transition:none!important}
+  .portrait img{transform:none!important}
+}
+</style>
+</head>
+<body>
+
+<div class="pre" id="pre" aria-hidden="true">
+  <div class="pre__brand">Shaheen VP</div>
+  <div class="pre__count"><span id="preNum">0</span><i>%</i></div>
+  <div class="pre__bar" id="preBar"></div>
+</div>
+
+<header class="site-nav" id="siteNav">
+  <nav aria-label="Main">
+    <ul class="nav-links">
+      <li><a href="#story">Story</a></li>
+      <li><a href="#ventures">Ventures</a></li>
+      <li><a href="#group">Group</a></li>
+      <li><a href="#make">What We Make</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <button class="burger" id="burger" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mmenu"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+<div class="mmenu" id="mmenu" aria-hidden="true">
+  <ul>
+    <li><span>01</span><a href="#story">Story</a></li>
+    <li><span>02</span><a href="#ventures">Ventures</a></li>
+    <li><span>03</span><a href="#group">Group</a></li>
+    <li><span>04</span><a href="#make">What We Make</a></li>
+    <li><span>05</span><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="mmenu__foot">
+    <span>Adnora Group of Companies · Kerala</span>
+    <a href="https://in.linkedin.com/in/mohammed-shaheen-879188249" target="_blank" rel="noreferrer noopener">LinkedIn ↗</a>
+    <a href="https://www.instagram.com/adnora.in/" target="_blank" rel="noreferrer noopener">Instagram · @adnora.in ↗</a>
+  </div>
+</div>
+<a class="fab" id="fab" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a>
+
+<main style="position:relative;width:100%;overflow-x:hidden">
+
+  <!-- hero -->
+  <section class="hero no-portrait" id="top">
+    <div class="hero__top">
+      <h2 class="roles" id="roles">
+        <span class="line"><span>Founder</span></span>
+        <span class="line"><span>Managing Director</span></span>
+        <span class="line"><span>Storyteller</span></span>
+        <span class="line"><span>Builder</span></span>
+      </h2>
+      <p class="hero__desc rise" id="heroDesc">I build companies where <b>story meets software</b>: a digital marketing and video production agency, a web and app studio, and a real-estate platform for Kerala, together as the <b>Adnora Group</b>.</p>
+    </div>
+    <!-- portrait slot: set data-src to a transparent cut-out PNG and remove "no-portrait" from the section -->
+    <div class="portrait" id="portrait" data-src="assets/portrait.png"></div>
+    <div class="hero__fade"></div>
+    <h1 class="hero__name" id="heroName" aria-label="Shaheen VP"><span aria-hidden="true">Shaheen</span><span aria-hidden="true">VP</span></h1>
+    <div class="cue rise" id="cue">Scroll to enter</div>
+  </section>
+
+  <section class="marquee" aria-label="What drives the group">
+    <div class="marquee__track" id="marquee"></div>
+  </section>
+
+  <!-- story -->
+  <section class="sec" id="story">
+    <div class="grid12">
+      <div class="c6">
+        <div class="eyebrow">The Story</div>
+        <h2 class="display sec-h big story-h" data-lines>One group. Every way a brand grows.</h2>
+        <p class="lead rise">I'm <b>Shaheen VP</b>, Founder and Managing Director of the <b>Adnora Group of Companies</b>. Adnora began with stories: films and campaigns that make people stop scrolling. It grew into software, because a great brand also needs a website and an app that work as hard as its marketing. Today the group tells the story, builds the product, and, through Rentzo, helps people across Kerala find their next home.</p>
+      </div>
+      <ul class="c6 principles">
+        <li class="rise" style="--delay:0ms"><span class="n">01</span><div><h3>Story before everything</h3><p>Every campaign at Adnora Productions starts with one question: what will make someone stop, watch and remember?</p></div></li>
+        <li class="rise" style="--delay:90ms"><span class="n">02</span><div><h3>Build what you promise</h3><p>Adnora Solutions turns attention into action with fast websites and apps, built in-house alongside the marketing.</p></div></li>
+        <li class="rise" style="--delay:180ms"><span class="n">03</span><div><h3>Solve real, local problems</h3><p>Rentzo makes finding and renting property in Kerala simpler, built by people who live here.</p></div></li>
+        <li class="rise" style="--delay:270ms"><span class="n">04</span><div><h3>Grow under one roof</h3><p>Film, marketing and code work best together. One group means one team, one plan and one point of contact.</p></div></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ventures -->
+  <section class="sec" id="ventures">
+    <div class="head-row">
+      <div>
+        <div class="eyebrow">Ventures</div>
+        <h2 class="display sec-h big" style="max-width:14ch" data-lines>The companies he leads.</h2>
+      </div>
+      <div class="side-label">04 / Ventures</div>
+    </div>
+    <ul class="ventures" id="ventureList"></ul>
+  </section>
+
+  <!-- group -->
+  <section class="sec" id="group">
+    <div class="head-row">
+      <div>
+        <div class="eyebrow">The Group</div>
+        <h2 class="display sec-h" style="line-height:1" data-lines>Built under one roof.</h2>
+      </div>
+    </div>
+    <dl class="map">
+      <div class="rise" style="--delay:0ms"><dt>Group of companies, led as Founder &amp; MD</dt><dd data-count="1" data-pad="2">01</dd></div>
+      <div class="rise" style="--delay:110ms"><dt>Adnora companies: Productions and Solutions</dt><dd data-count="2" data-pad="2">02</dd></div>
+      <div class="rise" style="--delay:220ms"><dt>Ventures, including co-founded Rentzo</dt><dd data-count="3" data-pad="2">03</dd></div>
+      <div class="rise" style="--delay:330ms"><dt>Home base for every venture</dt><dd>Kerala<em>.</em></dd></div>
+    </dl>
+    <div class="caps rise" style="--delay:120ms">
+      <p><span>Adnora Productions</span>Digital marketing · Social media · Video production · Brand films · Ad campaigns</p>
+      <p><span>Adnora Solutions</span>Websites · Web applications · Mobile apps · Software for growing businesses</p>
+      <p><span>Rentzo</span>Real-estate platform for Kerala · Renting · Listings</p>
+    </div>
+  </section>
+
+  <!-- what we make -->
+  <section class="sec" id="make">
+    <div class="head-row">
+      <div>
+        <div class="eyebrow">What We Make</div>
+        <h2 class="display sec-h" style="line-height:1" data-lines>Story. Software. Space.</h2>
+      </div>
+    </div>
+    <div class="grid12 make">
+      <ul class="c5 vlist" id="vlist" role="tablist" aria-label="What the group makes"></ul>
+      <div class="c7 feat">
+        <div>
+          <blockquote>
+            <p id="quote" aria-live="polite"></p>
+            <footer id="quoteBy"></footer>
+          </blockquote>
+          <div class="chips" id="chips"></div>
+        </div>
+        <figure class="feat__img reveal"><img src="assets/headshot.jpg" alt="Shaheen VP" loading="lazy" decoding="async" width="900" height="900"></figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- contact -->
+  <footer class="contact" id="contact">
+    <div class="eyebrow">Let's Talk</div>
+    <h2 class="display contact-h" data-lines>Have a brand that deserves a bigger story?</h2>
+    <p class="lead rise" style="max-width:44ch">Campaigns, films, websites, apps or a property in Kerala: the Adnora Group can take it from idea to launch.</p>
+    <a class="cta rise" href="https://in.linkedin.com/in/mohammed-shaheen-879188249" target="_blank" rel="noreferrer noopener">Message on LinkedIn <i aria-hidden="true">↗</i></a>
+
+    <div class="fbar">
+      <div class="c6">
+        <p class="sig">Shaheen VP</p>
+        <small>Founder &amp; Managing Director, Adnora Group</small>
+      </div>
+      <nav class="c3" aria-label="Social">
+        <ul class="social">
+          <li><a href="https://in.linkedin.com/in/mohammed-shaheen-879188249" target="_blank" rel="noreferrer noopener">LinkedIn</a></li>
+          <li><a href="https://www.instagram.com/adnora.in/" target="_blank" rel="noreferrer noopener">Instagram · @adnora.in</a></li>
+        </ul>
+      </nav>
+      <p class="c3 copy">© <span id="year">2026</span> Shaheen VP.<br>Adnora Group of Companies.</p>
+    </div>
+  </footer>
+</main>
+
+<script>
+  (function () {
+    const FONT_BASE = 16, BASE_W = 1920, COEF = 0.6666
+    function applyAdaptiveGrid () {
+      const w = window.innerWidth
+      const reduction = ((BASE_W - w) / BASE_W) * 100 * COEF
+      const size = FONT_BASE - (FONT_BASE * reduction) / 100
+      if (size > FONT_BASE) document.documentElement.style.fontSize = size + 'px'
+      else document.documentElement.style.removeProperty('font-size')
+    }
+    applyAdaptiveGrid(); addEventListener('resize', applyAdaptiveGrid)
+  })()
+</script>
+<script type="importmap">
+{ "imports": { "lenis": "https://cdn.jsdelivr.net/npm/lenis@1.3.19/dist/lenis.mjs" } }
+</script>
+<script type="module">
+const $ = s => document.querySelector(s)
+const $$ = s => [...document.querySelectorAll(s)]
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches
+const esc = s => s.replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]))
+$('#year').textContent = new Date().getFullYear()
+
+/* ---------- content ---------- */
+const MARQUEE = ['Ideas That Connect', 'Designs That Inspire', 'Results That Matter', 'Stories That Move', 'Unstoppable Growth']
+const VENTURES = [
+  { name:'Adnora Group of Companies', short:'Adnora Group', glyph:'A', tint:'rgba(109,181,38,.18)', role:'Founder & MD', where:'Kerala',
+    cat:'Parent company', tags:['Productions','Solutions','Strategy'],
+    blurb:'The group that brings marketing, film and software together under one roof, with one team and one plan for every client.' },
+  { name:'Adnora Productions', short:'Productions', glyph:'P', tint:'rgba(242,245,238,.07)', role:'Founder & CEO', where:'Digital agency',
+    cat:'Digital marketing · Video production', tags:['Brand films','Social media','Ad campaigns'],
+    blurb:'A digital marketing agency and video production company: campaigns, content and films that make brands impossible to scroll past.' },
+  { name:'Adnora Solutions', short:'Solutions', glyph:'S', tint:'rgba(109,181,38,.12)', role:'Adnora Group', where:'Software studio',
+    cat:'Web & app development', tags:['Websites','Web apps','Mobile apps'],
+    blurb:'A software company building websites and apps, so the products behind the marketing are as strong as the story.' },
+  { name:'Rentzo', short:'Rentzo', glyph:'R', tint:'rgba(242,245,238,.06)', role:'Co-founder', where:'Kerala',
+    cat:'Real-estate platform', tags:['Rentals','Listings','Kerala'],
+    blurb:'A real-estate platform based in Kerala, making it simpler to find, list and rent property.' },
+]
+const MAKE = [
+  { nm:'Story',    rl:'Adnora Productions', q:'Campaigns, social content and films that give a brand a voice people remember.', chips:['Digital marketing','Video production','Social media','Brand films'] },
+  { nm:'Software', rl:'Adnora Solutions',   q:'Websites and apps engineered to turn that attention into enquiries, sales and loyal users.', chips:['Websites','Web applications','Mobile apps'] },
+  { nm:'Space',    rl:'Rentzo',             q:'A real-estate platform for Kerala that makes finding and renting the right property simple.', chips:['Property listings','Rentals','Kerala'] },
+]
+
+/* ---------- build ---------- */
+$('#marquee').innerHTML = [...MARQUEE, ...MARQUEE].map((w, i) => `<span class="marquee__item"${i >= MARQUEE.length ? ' aria-hidden="true"' : ''}>${esc(w)}</span>`).join('')
+$('#ventureList').innerHTML = VENTURES.map((v, i) => `
+  <li class="rise" style="--y:60px;--d:.62s;--delay:${i % 2 ? 120 : 0}ms">
+    <article>
+      <div class="panel${reduce ? '' : ' reveal'}" style="--tint:${v.tint}" role="img" aria-label="${esc(v.name)}">
+        <span class="panel__glyph" aria-hidden="true">${v.glyph}</span>
+        <div class="panel__word" aria-hidden="true"><span>${esc(v.role)}</span><span>${String(i + 1).padStart(2, '0')}</span></div>
+        <div class="panel__tags" aria-hidden="true">${v.tags.map(t => `<span>${esc(t)}</span>`).join('')}</div>
+        <div class="panel__name" aria-hidden="true">${esc(v.short)}</div>
+      </div>
+      <div class="vrow">
+        <div><h3>${esc(v.name)}</h3><p>${esc(v.blurb)}</p></div>
+        <div class="vmeta"><span>${esc(v.where)}</span><b>${esc(v.role)}</b></div>
+      </div>
+      <p class="vcat"><b>${String(i + 1).padStart(2, '0')}</b>${esc(v.cat)}</p>
+    </article>
+  </li>`).join('')
+$('#vlist').innerHTML = MAKE.map((w, i) => `
+  <li><button type="button" role="tab" aria-selected="${i === 0}" data-i="${i}">
+    <span class="idx">${String(i + 1).padStart(2, '0')}</span>
+    <span class="who"><span class="nm">${esc(w.nm)}</span><span class="rl">${esc(w.rl)}</span></span>
+    <span class="rule"></span>
+  </button></li>`).join('')
+
+/* portrait slot (fills in once a cut-out photo is supplied) */
+const portrait = $('#portrait')
+if (portrait.dataset.src) {
+  portrait.innerHTML = `<img src="${portrait.dataset.src}" alt="Shaheen VP, Founder and Managing Director of Adnora Group" fetchpriority="high" decoding="async">`
+  $('#top').classList.remove('no-portrait')
+}
+
+/* ---------- count-up ---------- */
+function countUp (dd) {
+  const end = parseFloat(dd.dataset.count), padN = +dd.dataset.pad || 0
+  const fmt = v => String(Math.round(v)).padStart(padN, '0')
+  if (reduce) { dd.textContent = fmt(end); return }
+  const t0 = performance.now(), dur = 1200
+  const step = now => { const k = Math.min(1, (now - t0) / dur); dd.textContent = fmt(end * (1 - Math.pow(1 - k, 4))); if (k < 1) requestAnimationFrame(step) }
+  dd.textContent = fmt(0); requestAnimationFrame(step)
+}
+
+/* ---------- headings: split into lines ---------- */
+function splitLines (el) {
+  const words = el.textContent.trim().split(/\s+/)
+  el.setAttribute('aria-label', el.textContent.trim())
+  el.innerHTML = words.map(w => `<span class="w" aria-hidden="true">${esc(w)}</span>`).join(' ')
+  const lines = []; let top = null
+  el.querySelectorAll('.w').forEach(w => {
+    if (w.offsetTop !== top) { lines.push([]); top = w.offsetTop }
+    lines[lines.length - 1].push(w.textContent)
+  })
+  el.innerHTML = lines.map((l, i) => `<span class="line" aria-hidden="true"><span style="transition-delay:${i * 90}ms">${esc(l.join(' '))}</span></span>`).join('')
+}
+
+/* ---------- giant name: fit, then letters ---------- */
+const nameEl = $('#heroName')
+function fitName () {
+  const vw = innerWidth, root = parseFloat(getComputedStyle(document.documentElement).fontSize)
+  const maxFs = (vw >= 640 ? 28 : 13) * root
+  nameEl.style.setProperty('--name-fs', '100px')
+  const widest = Math.max(...[...nameEl.children].map(s => s.scrollWidth))
+  const fit = (vw * 0.96) / widest * 100
+  const tall = vw >= 640 ? innerHeight * 0.36 / 0.78 / 2 * 1.6 : innerHeight * 0.13
+  const fs = Math.min(maxFs, fit, tall)
+  nameEl.style.setProperty('--name-fs', fs + 'px')
+  nameEl.style.setProperty('--kv-shift', Math.max(0, (vw - widest * fs / 100) / 2) + 'px')
+}
+nameEl.querySelectorAll('span').forEach((line, li) => {
+  line.innerHTML = [...line.textContent].map((c, ci) => `<span class="ch" style="transition-delay:${li * 240 + ci * 52}ms">${esc(c)}</span>`).join('')
+})
+
+/* ---------- in-view (once) ---------- */
+const io = new IntersectionObserver(es => es.forEach(e => {
+  if (!e.isIntersecting) return
+  e.target.classList.add(e.target.matches('[data-lines]') ? 'go' : 'in')
+  e.target.querySelectorAll?.('dd[data-count]').forEach(countUp)
+  io.unobserve(e.target)
+}), { threshold: 0 })
+
+/* ---------- selector with word-by-word line ---------- */
+const quote = $('#quote')
+let qTimer = [], cur = 0
+function show (i) {
+  qTimer.forEach(clearTimeout); qTimer = []
+  $$('#vlist button').forEach(b => b.setAttribute('aria-selected', String(+b.dataset.i === i)))
+  quote.innerHTML = MAKE[i].q.split(' ').map(w => `<span class="wd">${esc(w)}</span>`).join(' ')
+  $('#quoteBy').textContent = MAKE[i].rl
+  $('#chips').innerHTML = MAKE[i].chips.map(c => `<span>${esc(c)}</span>`).join('')
+  const spans = [...quote.children]
+  if (reduce) { spans.forEach(s => s.classList.add('on')); return }
+  requestAnimationFrame(() => spans.forEach((s, k) => qTimer.push(setTimeout(() => s.classList.add('on'), k * 22))))
+}
+$$('#vlist button').forEach(b => {
+  const pick = () => { const i = +b.dataset.i; if (i !== cur) { cur = i; show(i) } }
+  b.addEventListener('click', pick); b.addEventListener('mouseenter', pick); b.addEventListener('focus', pick)
+})
+show(0)
+
+/* ---------- Lenis smooth scroll ---------- */
+let lenis = null
+try {
+  const { default: Lenis } = await import('lenis')
+  lenis = new Lenis({ smoothWheel: true })
+  const raf = t => { lenis.raf(t); requestAnimationFrame(raf) }
+  requestAnimationFrame(raf)
+} catch (err) { /* native scroll still works */ }
+const goTo = sel => { const t = document.querySelector(sel); if (!t) return; lenis ? lenis.scrollTo(t, { offset: -10 }) : t.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth' }) }
+$$('a[href^="#"]').forEach(a => a.addEventListener('click', e => { e.preventDefault(); closeMenu(); goTo(a.getAttribute('href')) }))
+const nav = $('#siteNav')
+addEventListener('scroll', () => nav.classList.toggle('scrolled', scrollY > 40), { passive: true })
+
+/* ---------- mobile menu ---------- */
+const burger = $('#burger'), mmenu = $('#mmenu')
+const menuLinks = [...mmenu.querySelectorAll('ul a')]
+function openMenu () {
+  mmenu.classList.add('open'); mmenu.setAttribute('aria-hidden', 'false')
+  burger.setAttribute('aria-expanded', 'true'); burger.setAttribute('aria-label', 'Close menu')
+  menuLinks.forEach((a, i) => { a.style.transitionDelay = (120 + i * 60) + 'ms' })
+  lenis?.stop()
+}
+function closeMenu () {
+  if (!mmenu.classList.contains('open')) return
+  mmenu.classList.remove('open'); mmenu.setAttribute('aria-hidden', 'true')
+  burger.setAttribute('aria-expanded', 'false'); burger.setAttribute('aria-label', 'Open menu')
+  menuLinks.forEach(a => { a.style.transitionDelay = '0ms' })
+  lenis?.start()
+}
+burger.addEventListener('click', () => mmenu.classList.contains('open') ? closeMenu() : openMenu())
+addEventListener('keydown', e => { if (e.key === 'Escape') closeMenu() })
+
+/* ---------- start ---------- */
+await document.fonts.ready.catch(() => {})
+fitName(); addEventListener('resize', fitName)
+$$('[data-lines]').forEach(el => { splitLines(el); io.observe(el) })
+$$('.rise').forEach(el => { if (!el.closest('.hero')) io.observe(el) })
+$$('.panel.reveal, .feat__img').forEach(el => io.observe(el))
+const fab = $('#fab'); let pastHero = false, atContact = false
+const fabSync = () => fab.classList.toggle('show', pastHero && !atContact)
+new IntersectionObserver(([e]) => { pastHero = !e.isIntersecting; fabSync() }).observe($('#top'))
+new IntersectionObserver(([e]) => { atContact = e.isIntersecting; fabSync() }).observe($('#contact'))
+
+function heroSequence (base) {
+  setTimeout(() => nameEl.classList.add('go'), base)
+  setTimeout(() => $('#portrait').classList.add('in'), base + 150)
+  $$('#roles .line>span').forEach((s, i) => { s.style.transitionDelay = (base + 200 + i * 80) + 'ms' })
+  $('#roles').classList.add('go')
+  setTimeout(() => $('#heroDesc').classList.add('in'), base + 400)
+  setTimeout(() => $('#cue').classList.add('in'), base + 900)
+}
+const pre = $('#pre')
+if (reduce) { pre.classList.add('done'); heroSequence(0) }
+else {
+  lenis?.stop(); scrollTo(0, 0)
+  const num = $('#preNum'), bar = $('#preBar'), t0 = performance.now()
+  const tick = now => {
+    const p = Math.min(1, (now - t0) / 2000)
+    num.textContent = Math.round(p * 100); bar.style.setProperty('--p', p)
+    if (p < 1) return requestAnimationFrame(tick)
+    pre.classList.add('fade')
+    setTimeout(() => {
+      pre.classList.add('wipe')
+      const finish = () => { if (pre.classList.contains('done')) return; pre.classList.add('done'); lenis?.start() }
+      pre.addEventListener('transitionend', e => { if (e.target === pre) finish() })
+      setTimeout(finish, 900)
+    }, 500)
+  }
+  requestAnimationFrame(tick)
+  heroSequence(2500)
+}
+</script>
+</body>
+</html>
